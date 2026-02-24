@@ -76,12 +76,12 @@ If product not found → 404 Not Found<br><br>
 
 
 
-🌍 Sample API URLs (After Deployment)<br>
-https://your-render-link.onrender.com/products
-https://your-render-link.onrender.com/products/1
-https://your-render-link.onrender.com/products/category/Electronics
-https://your-render-link.onrender.com/products/stock/2
-https://your-render-link.onrender.com/products/price/3
+🌍 Sample API URLs (After Deployment)<br><br>
+https://your-render-link.onrender.com/products<br>
+https://your-render-link.onrender.com/products/1<br>
+https://your-render-link.onrender.com/products/category/Electronics<br>
+https://your-render-link.onrender.com/products/stock/2<br>
+https://your-render-link.onrender.com/products/price/3<br>
 ```<br><br>
 
 ---
