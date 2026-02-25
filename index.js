@@ -74,7 +74,14 @@ app.get("/products/:id", (req, res) => {
   res.status(200).json(product);
 });
 
+// app.get("/products/:id", (req,res) =>{
+//   const id = parseInt(res.params.id);
+//   const product = products.find(p => p.id === id);
 
+//   if(!product){
+//     return res.status(404).json({message:"Not found product"});
+//   }
+// })
 // 3️ GET products by category
 
 app.get("/products/category/:categoryName", (req, res) => {
@@ -132,7 +139,7 @@ app.put("/products/:id", (req, res) => {
 
 // 6️ Update stock only (Your preferred format)
 
-app.put("/products/stock/:id", (req, res) => {
+app.put("/products/:id/stock", (req, res) => {
   const id = parseInt(req.params.id);
   const product = products.find(p => p.id === id);
 
@@ -148,7 +155,7 @@ app.put("/products/stock/:id", (req, res) => {
 
 // 7️ Update price only (Your preferred format)
 
-app.put("/products/price/:id", (req, res) => {
+app.put("/products/:id/price", (req, res) => {
   const id = parseInt(req.params.id);
   const product = products.find(p => p.id === id);
 
