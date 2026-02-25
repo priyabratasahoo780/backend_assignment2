@@ -76,18 +76,18 @@ If product not found → 404 Not Found<br><br>
 
 
 🌍 Sample API URLs (After Deployment)<br><br>
-https://your-render-link.onrender.com/products<br>
-https://your-render-link.onrender.com/products/1<br>
-https://your-render-link.onrender.com/products/category/Electronics<br>
-https://your-render-link.onrender.com/products/stock/2<br>
-https://your-render-link.onrender.com/products/price/3<br>
+https://backend-assignment2-x7jc.onrender.com/products<br>
+https://backend-assignment2-x7jc.onrender.com/products/1<br>
+https://backend-assignment2-x7jc.onrender.com/products/category/Electronics<br>
+https://backend-assignment2-x7jc.onrender.com/products/stock/2<br>
+https://backend-assignment2-x7jc.onrender.com/products/price/3<br>
 <br><br>
 
 
 ## 💻 Steps to Run Locally<br>
 
 1️⃣ Clone the repository<br>
-git clone https://github.com/your-username/ecommerce-product-api.git<br><br>
+git clone https://github.com/priyabratasahoo780/backend_assignment2.git<br><br>
 
 2️⃣ Navigate into the project folder<br>
 cd ecommerce-product-api<br><br>
@@ -107,7 +107,7 @@ http://localhost:3000<br><br>
 This project is deployed on **Render**.<br><br>
 
 🔗 **Deployed Link**<br>
-https://your-app-name.onrender.com<br><br>
+https://backend-assignment2-x7jc.onrender.com<br><br>
 
 
 
