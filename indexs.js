@@ -137,7 +137,7 @@ app.put("/products/:id", (req, res) => {
 });
 
 
-// 6️ Update stock only (Your preferred format)
+// 6️ Update stock only
 
 app.put("/products/:id/stock", (req, res) => {
   const id = parseInt(req.params.id);
@@ -153,7 +153,7 @@ app.put("/products/:id/stock", (req, res) => {
 });
 
 
-// 7️ Update price only (Your preferred format)
+// 7️ Update price only 
 
 app.put("/products/:id/price", (req, res) => {
   const id = parseInt(req.params.id);
