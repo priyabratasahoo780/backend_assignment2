@@ -1,144 +1,139 @@
-# 📘 Backend Assignment 2
-E-Commerce Product REST API (In-Memory)<br><br>
-📌 Project Overview<br>
+# 🛒 E-Commerce Product REST API (In-Memory)
 
-This project is a RESTful API built using Express.js that manages product listings for an e-commerce platform using an in-memory JSON database.<br><br>
+[![Deployed on Render](https://img.shields.io/badge/Deployed%20on-Render-success?style=for-the-badge&logo=render)](https://backend-assignment2-x7jc.onrender.com)
+[![Postman Docs](https://img.shields.io/badge/Postman-API_Docs-orange?style=for-the-badge&logo=postman)](https://documenter.getpostman.com/view/50839186/2sBXcGFL9z)
 
-The API supports GET, POST, and PUT operations and follows REST principles including proper route design and correct HTTP status codes.<br><br>
+## 📌 Project Overview
+This project is a RESTful API built using **Express.js** that manages product listings for an e-commerce platform using an in-memory JSON database. The API supports `GET`, `POST`, and `PUT` operations and follows strict REST principles including proper route design and correct HTTP status codes.
 
-No external database is used — all data is stored in a local JSON array inside the project.<br><br>
+> *No external database is used — all data is stored in a local JSON array inside the project.*
 
-🎯 Objective<br><br>
+---
 
-Build a REST API using Express.js<br>
+## 📖 API Documentation
+Explore the detailed API endpoints, request payloads, and response examples using our interactive Postman documentation:
 
-Implement GET, POST, and PUT routes<br>
+👉 **[View Postman API Documentation](https://documenter.getpostman.com/view/50839186/2sBXcGFL9z)**
 
-Use both static and dynamic routes<br>
+---
 
-Follow REST principles<br>
+## 🎯 Objective
+- Build a robust REST API using **Express.js**
+- Implement `GET`, `POST`, and `PUT` routes
+- Utilize both static and dynamic routes
+- Follow REST principles rigorously
+- Return proper HTTP status codes
+- Store data in an in-memory JSON array
 
-Return proper HTTP status codes<br>
+---
 
-Store data in an in-memory JSON array<br><br>
+## 🛠 Tech Stack
+- **Node.js**
+- **Express.js**
+- **CORS**
+- **JavaScript (ES6)**
 
-🛠 Tech Stack<br><br>
+---
 
-Node.js<br>
-Express.js<br>
-CORS<br>
+## 📂 Implemented Routes
 
+### 🔹 GET Routes
+| Endpoint | Description | Status Code |
+|----------|-------------|-------------|
+| `GET /products` | Returns all product records. | `200 OK` |
+| `GET /products/:id` | Returns specific product details. *(Dynamic Route)* | `200 OK` / `404 Not Found` |
+| `GET /products/category/:categoryName` | Returns all products from a specified category (case-insensitive). | `200 OK` |
 
-JavaScript (ES6)<br><br>
-📂 Implemented Routes<br><br>
-🔹 GET Routes<br><br>
+### 🔹 POST Route
+| Endpoint | Description | Status Code |
+|----------|-------------|-------------|
+| `POST /products` | Adds a new product to the system. ID is auto-generated. | `201 Created` |
 
-1️⃣ Get All Products<br>
-GET /products<br>
-Returns all product records.<br>
-Status Code: 200 OK<br><br>
+### 🔹 PUT Routes
+| Endpoint | Description | Status Code |
+|----------|-------------|-------------|
+| `PUT /products/:id` | Replaces the entire product except its ID. | `200 OK` / `404 Not Found` |
+| `PUT /products/stock/:id` | Updates only the `stock` field of a product. | `200 OK` / `404 Not Found` |
+| `PUT /products/price/:id` | Updates only the `price` field of a product. | `200 OK` / `404 Not Found` |
 
-2️⃣ Get Product by ID (Dynamic Route)<br>
-GET /products/:id<br>
-Returns specific product details.<br>
-If product not found → 404 Not Found<br><br>
+---
 
-3️⃣ Get Products by Category (Dynamic Route)<br>
-GET /products/category/:categoryName<br>
-Returns all products from the specified category (case-insensitive).<br>
-Returns empty array if no products match.<br><br>
+## 🌍 Sample API URLs (Deployed)
+You can test the deployed API using these sample endpoints:
 
-🔹 POST Route<br><br>
+- **Get All Products:** [https://backend-assignment2-x7jc.onrender.com/products](https://backend-assignment2-x7jc.onrender.com/products)
+- **Get Product by ID:** [https://backend-assignment2-x7jc.onrender.com/products/1](https://backend-assignment2-x7jc.onrender.com/products/1)
+- **Get Products by Category:** [https://backend-assignment2-x7jc.onrender.com/products/category/Electronics](https://backend-assignment2-x7jc.onrender.com/products/category/Electronics)
+- **Update Stock (PUT):** `https://backend-assignment2-x7jc.onrender.com/products/stock/2`
+- **Update Price (PUT):** `https://backend-assignment2-x7jc.onrender.com/products/price/3`
 
-4️⃣ Add New Product<br>
-POST /products<br>
-Adds a new product to the system.<br>
-ID is auto-generated.<br>
-Status Code: 201 Created<br><br>
+---
 
-🔹 PUT Routes<br><br>
+## 💻 Steps to Run Locally
 
-5️⃣ Replace Full Product<br>
-PUT /products/:id<br>
-Replaces entire product except ID.<br>
-If product not found → 404 Not Found<br><br>
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/priyabratasahoo780/backend_assignment2.git
+   ```
+2. **Navigate into the project folder:**
+   ```bash
+   cd backend_assignment2
+   ```
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+4. **Start the server:**
+   ```bash
+   npm start
+   ```
 
-6️⃣ Update Product Stock<br>
-PUT /products/stock/:id<br>
-Updates only the stock field of a product.<br>
-If product not found → 404 Not Found<br><br>
+**Server will run at:** `http://localhost:3000`
 
-7️⃣ Update Product Price<br>
-PUT /products/price/:id<br>
-Updates only the price field of a product.<br>
-If product not found → 404 Not Found<br><br>
+---
 
+## 🚀 Deployment
 
+This project is live and deployed on **Render**.
 
-🌍 Sample API URLs (After Deployment)<br><br>
-https://backend-assignment2-x7jc.onrender.com/products<br>
-https://backend-assignment2-x7jc.onrender.com/products/1<br>
-https://backend-assignment2-x7jc.onrender.com/products/category/Electronics<br>
-https://backend-assignment2-x7jc.onrender.com/products/stock/2<br>
-https://backend-assignment2-x7jc.onrender.com/products/price/3<br>
-<br><br>
+🔗 **Deployed Link:** [https://backend-assignment2-x7jc.onrender.com](https://backend-assignment2-x7jc.onrender.com)
 
+---
 
-## 💻 Steps to Run Locally<br>
+## 📁 Project Structure
 
-1️⃣ Clone the repository<br>
-git clone https://github.com/priyabratasahoo780/backend_assignment2.git<br><br>
-
-2️⃣ Navigate into the project folder<br>
-cd ecommerce-product-api<br><br>
-
-3️⃣ Install dependencies<br>
-npm install<br><br>
-
-4️⃣ Start the server<br>
-npm start<br><br>
-
-Server will run at:<br>
-http://localhost:3000<br><br>
-
-
-## 🚀 Deployment<br>
-
-This project is deployed on **Render**.<br><br>
-
-🔗 **Deployed Link**<br>
-https://backend-assignment2-x7jc.onrender.com<br><br>
-
-
-
-## 📁 Project Structure<br>
-
-ecommerce-product-api/
+```text
+backend_assignment2/
 │
-├── server.js # Main server file
-├── package.json # Project configuration
-├── package-lock.json
-└── README.md # Project documentation
+├── index.js             # Main server file
+├── package.json         # Project configuration
+├── package-lock.json    # Dependency tree
+└── README.md            # Project documentation
+```
 
+---
 
+## 📡 HTTP Status Codes Used
 
-## 📡 HTTP Status Codes Used<br>
+| Status Code | Meaning |
+|:---:|---|
+| **`200 OK`** | Request successful |
+| **`201 Created`** | Resource successfully created |
+| **`404 Not Found`** | Resource does not exist |
 
-| Status Code   | Meaning                       |
-| ------------- | ----------------------------- |
-| 200 OK        | Request successful            |
-| 201 Created   | Resource successfully created |
-| 404 Not Found | Resource does not exist       |<br><br>
+---
 
+## 🧠 Key Concepts Implemented
+- **RESTful API design**
+- **Static and Dynamic routes**
+- **Route parameters (`req.params`)**
+- **Request body handling (`req.body`)**
+- **Array methods (`find`, `filter`, `findIndex`)**
+- **Proper HTTP status codes**
+- **Middleware usage (`express.json`, `cors`)**
+- **In-memory data management**
 
-## 🧠 Key Concepts Implemented<br>
-
-- RESTful API design<br>
-- Static and Dynamic routes<br>
-- Route parameters (req.params)<br>
-- Request body handling (req.body)<br>
-- Array methods (find, filter, findIndex)<br>
-- Proper HTTP status codes<br>
-- Middleware usage (express.json, cors)<br>
-- In-memory data management<br><br>
-
+---
+<div align="center">
+  <i>Built with ❤️ for Backend Development</i>
+</div>
