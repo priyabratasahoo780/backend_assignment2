@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h1>Timer</h1>
+
+  <h2 id="count">0</h2>
+
+  <script>
+    let count = 0;
+
+    setInterval(() => {
+      count++;
+      document.getElementById("count").innerText = count;
+    }, 1000);
+  </script>
+
+</body>
+</html>
