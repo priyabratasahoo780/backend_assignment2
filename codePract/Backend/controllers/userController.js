@@ -127,7 +127,7 @@ if (req.body.phone !== undefined) {
 
          res.status(200).json({
           success:true,
-          message:"sucessfully partail update this user"
+          message:"sucessfully partial update this user"
          })
   }
      catch(error){

@@ -32,28 +32,28 @@
 
 
 
-
-function debouncing(callback, delay){
+function DeBouncing(fn, delay){
     let timer;
 
     return function(...args){
-        clearTimeout(timer);
+          clearTimeout(timer);
 
-        timer = setTimeout(() => {
-            callback(...args);
-        },delay);
+          timer = setTimeout(() => {
+              fn(...args)
+          },delay);
     }
 }
 
-
 function search(n){
-    console.log("search somethings else " + n);
+    console.log("searching process is going on!  " + n);
 }
 
+const DebounceSerach = DeBouncing(search, 1000);
 
-const debounceSearch = debouncing(search,1000);
 
-debounceSearch("H");
-debounceSearch("Hi");
-debounceSearch("Him");
+DebounceSerach("H");
+DebounceSerach("He");
+DebounceSerach("Hel");
+DebounceSerach("Hell");
+DebounceSerach("Hello");
 
