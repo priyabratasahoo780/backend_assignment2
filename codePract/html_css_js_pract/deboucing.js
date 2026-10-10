@@ -32,28 +32,53 @@
 
 
 
-function DeBouncing(fn, delay){
+// function DeBouncing(fn, delay){
+//     let timer;
+
+//     return function(...args){
+//           clearTimeout(timer);
+
+//           timer = setTimeout(() => {
+//               fn(...args)
+//           },delay);
+//     }
+// }
+
+// function search(n){
+//     console.log(n);
+// }
+
+// const DebounceSerach = DeBouncing(search, 1000);
+
+
+// DebounceSerach("H");
+// DebounceSerach("He");
+// DebounceSerach("Hel");
+// DebounceSerach("Hell");
+// DebounceSerach("Hello");
+
+
+
+function Debounced(fn, delay){
     let timer;
 
     return function(...args){
-          clearTimeout(timer);
-
-          timer = setTimeout(() => {
-              fn(...args)
-          },delay);
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            fn(...args);
+        },delay);
     }
 }
 
 function search(n){
-    console.log("searching process is going on!  " + n);
+    console.log("debouncing testers n 6hym " + n);
 }
 
-const DebounceSerach = DeBouncing(search, 1000);
+ const debounSearch = Debounced(search, 2000);
 
 
-DebounceSerach("H");
-DebounceSerach("He");
-DebounceSerach("Hel");
-DebounceSerach("Hell");
-DebounceSerach("Hello");
-
+ debounSearch("H");
+ debounSearch("He");
+ debounSearch("Hel");
+ debounSearch("Hell");
+ debounSearch("Hello");

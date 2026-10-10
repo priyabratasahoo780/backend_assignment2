@@ -10,7 +10,7 @@ const page = async () => {
     throw new Error("Failed to fetch products from server");
   }
 
-  const json = await res.json();
+  const json = await res.json(); 
   const products: ProductType[] = json.data || [];
 
   return (
