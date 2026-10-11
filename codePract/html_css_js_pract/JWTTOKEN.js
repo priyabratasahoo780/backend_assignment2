@@ -24,7 +24,7 @@ const UsersLogin = async(req,res) => {
                 })
            }
 
-           const Token = await jwt.sign({
+           const Token = jwt.sign({
             id: users._id.toString()},
             JWT_SECRET,
             {expiresIn:"7d"}

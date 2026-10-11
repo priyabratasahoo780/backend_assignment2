@@ -28,6 +28,29 @@ const AuthMiddleware = (req,res, next) => {
 }
 
 
+     const autMidd = async(req,res,next) => {
+          try{
+                 const authheader = req.header.authorization;
+
+                 if(!authheader || !authheader.statWith("Bearer ")){
+                    return res.status(404).json({
+                         success:false,
+                         message:"token required"
+                    });
+                 }
+
+                 const token = authheader.split(" ")[1];
+
+                 const decoded = jwt.verify(
+                    token,
+                    process.env.JWT_SECRET
+                 );
+                 req.user = decoded;
+                 next();
+          } catch(error){
+             next(error);
+         }
+     }
 // router middleware
 
 
