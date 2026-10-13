@@ -7,7 +7,9 @@ int main(){
  int j = 0;
  for(int i=0; i<v.size(); i++){
     if(v[i] != 0){
-      swap(v[i], v[j]);
+      int temp = v[i];
+      v[i] = v[j];
+       v[j] = temp;
       j++;
     }
  }

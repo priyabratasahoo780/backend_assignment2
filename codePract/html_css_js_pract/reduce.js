@@ -1,22 +1,22 @@
-// const products = [
-//   { name: "Light", category: "Electronics" },
-//   { name: "TV", category: "Electronics" },
-//   { name: "Fan", category: "Electronics" },
-//   { name: "Shirt", category: "Clothing" },
-//   { name: "Jeans", category: "Clothing" },
-//   { name: "Pizza", category: "Food" },
-//   { name: "Burger", category: "Food" }
-// ];
+const products = [
+  { name: "Light", category: "Electronics" },
+  { name: "TV", category: "Electronics" },
+  { name: "Fan", category: "Electronics" },
+  { name: "Shirt", category: "Clothing" },
+  { name: "Jeans", category: "Clothing" },
+  { name: "Pizza", category: "Food" },
+  { name: "Burger", category: "Food" }
+];
 
-// const res = products.reduce((acc, item) =>{
-//      if(!acc[item.category]){
-//         acc[item.category] = [];
-//      }
-//          acc[item.category].push(item.category);
+const res = products.reduce((acc, item) =>{
+     if(!acc[item.category]){
+        acc[item.category] = [];
+     }
+         acc[item.category].push(item.category);
 
-//          return acc;
-// },{})
-//      console.log(res);
+         return acc;
+},{})
+     console.log(res);
 
 
 // const resu = products.reduce((acc, item) => {

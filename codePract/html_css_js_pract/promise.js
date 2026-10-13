@@ -8,79 +8,116 @@ const orderFood = new Promise((resolve, reject) => {
     }
 });
 
-orderFood
-.then((message) => {
-  console.log(message);
-})
-.catch((error) => {
-  console.log(error);
-})
-.finally(() =>{
-  console.log("Promise completed");
-});
-
-
-
-// Promise resolve 
-
-const resolvedPromise = Promise.resolve("Promise Resolved successfully");
-
-resolvedPromise
-.then((result) => {
-  console.log("Resolve:", result);
-})
-
-
-// Promise Reject
-
-const rejectPromise = Promise.reject("Promise rejected ");
-
-rejectPromise.catch((error) => {
-  console.log("reject:", error);
-})
-
-
-// PROMISE.all()
-
-const p1 = Promise.resolve("User Data");
-const p2 = Promise.resolve("Product Data");
-const p3 = Promise.resolve("Order Data");
-
-Promise.all([p1, p2, p3])
-.then((result) => {
-  console.log("All:", result);
-})
-.catch((error) => {
-  console.log("All Error", error);
-})
-
-
-
-function outer(){
-  let count = 0;
-  function Inner(){
-      count++;
-      console.log(count);
+async function waterOrder(){
+   
+  try{
+      const res = await orderFood;
+      console.log(res);
+  } catch(error){
+    console.log(error);
   }
 }
-    const Counter = outer();
 
-    Counter();
-    Counter();
-    Counter();
+waterOrder();
 
 
+function getData() {
+  return new Promise((resolve, reject) => {
+      const success = false;
+
+      if (success) {
+        resolve("Data fetched successfully");
+      } else {
+        reject("Something went wrong");
+      }
+  });
+}
+
+async function fetchData() {
+  try {
+    const result = await getData();
+    console.log(result);
+  } catch (error) {
+    console.log("Error:", error);
+  }
+}
+
+fetchData();
 
 
-// promise race
+// orderFood
+// .then((message) => {
+//   console.log(message);
+// })
+// .catch((error) => {
+//   console.log(error);
+// })
+// .finally(() =>{
+//   console.log("Promise completed");
+// });
+
+
+
+// // Promise resolve 
+
+// const resolvedPromise = Promise.resolve("Promise Resolved successfully");
+
+// resolvedPromise
+// .then((result) => {
+//   console.log("Resolve:", result);
+// })
+
+
+// // Promise Reject
+
+// const rejectPromise = Promise.reject("Promise rejected ");
+
+// rejectPromise.catch((error) => {
+//   console.log("reject:", error);
+// })
+
+
+// // PROMISE.all()
+
+// const p1 = Promise.resolve("User Data");
+// const p2 = Promise.resolve("Product Data");
+// const p3 = Promise.resolve("Order Data");
+
+// Promise.all([p1, p2, p3])
+// .then((result) => {
+//   console.log("All:", result);
+// })
+// .catch((error) => {
+//   console.log("All Error", error);
+// })
+
+
+
+// function outer(){
+//   let count = 0;
+//   function Inner(){
+//       count++;
+//       console.log(count);
+//   }
+// }
+//     const Counter = outer();
+
+//     Counter();
+//     Counter();
+//     Counter();
+
+
+
+
+// // promise race
     
-const p1 = new Promise(resolve => {
-    setTimeout(() => resolve("First"), 1000);
-});
+// const p1 = new Promise(resolve => {
+//     setTimeout(() => resolve("First"), 1000);
+// });
 
-const p2 = new Promise(resolve => {
-    setTimeout(() => resolve("Second"), 500);
-});
+// const p2 = new Promise(resolve => {
+//     setTimeout(() => resolve("Second"), 500);
+// });
 
-Promise.race([p1, p2])
-    .then(result => console.log(result));
+// Promise.race([p1, p2])
+//     .then(result => console.log(result));

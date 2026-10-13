@@ -21,6 +21,7 @@ const GetUsers = async(req,res) => {
 }
 
 
+
 const SingleUsers = async(req, res) => {
     try{
            const users = await User.findById(req.params.id);
